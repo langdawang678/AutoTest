@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<suite name="MultiThreadOnXML">
+    <test name="MultiThreadOnXML">
+        <classes>
+            <class name="com.course.testngdemo.multiThread.MultiThreadOnXML"/>
+        </classes>
+    </test>
+</suite>

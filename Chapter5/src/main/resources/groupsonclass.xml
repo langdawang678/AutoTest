@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<suite name="suite">
+    <test name="GroupsOnClassALl">
+        <classes>
+            <class name="com.course.testngdemo.groups.GroupsOnClass1"/>
+            <class name="com.course.testngdemo.groups.GroupsOnClass2"/>
+            <class name="com.course.testngdemo.groups.GroupsOnClass3"/>
+        </classes>
+    </test>
+    <test name="GroupsOnClass-groups-run">
+        <groups>
+            <run>
+                <include name="12"/>
+            </run>
+        </groups>
+        <classes>
+            <class name="com.course.testngdemo.groups.GroupsOnClass1"/>
+            <class name="com.course.testngdemo.groups.GroupsOnClass2"/>
+            <class name="com.course.testngdemo.groups.GroupsOnClass3"/>
+        </classes>
+    </test>
+</suite>
