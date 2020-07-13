@@ -9,12 +9,14 @@ import org.springframework.scheduling.annotation.EnableScheduling;
 import javax.annotation.PreDestroy;
 
 @EnableScheduling
-@SpringBootApplication
+//之前10章节的@ComponentScan("com.course") //代表扫描哪些组件；现在不用了，以后都这么写
+@SpringBootApplication//代表托管
 public class Application {
 
     private  static ConfigurableApplicationContext context;
 
     public static void main(String[] args) {
+
         Application.context = SpringApplication.run(Application.class,args);
     }
 

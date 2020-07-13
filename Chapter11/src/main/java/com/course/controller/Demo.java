@@ -1,3 +1,4 @@
+//10-2demo运行getUserCount
 package com.course.controller;
 
 
@@ -16,16 +17,16 @@ import org.springframework.web.bind.annotation.*;
 public class Demo {
 
     //首先获取一个执行sql语句的对象
-
-    @Autowired
+    @Autowired  //启动即加载，demo类启动时，下面的对象即被加载和赋值
     private SqlSessionTemplate template;
 
     @RequestMapping(value = "/getUserCount",method = RequestMethod.GET)
     @ApiOperation(value = "可以获取到用户数",httpMethod = "GET")
     public int getUserCount(){
-       return template.selectOne("getUserCount");
+        return template.selectOne("getUserCount");
     }
 
+    //11-3 使用mybatis实现添加数据和idea的debug操作 (09:54)
     @RequestMapping(value = "/addUser",method = RequestMethod.POST)
     public int addUser(@RequestBody User user){
         int result = template.insert("addUser",user);
